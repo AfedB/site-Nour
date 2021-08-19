@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+:root {
+    --rochesterfont: 'Rochester', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+
+html::-webkit-scrollbar-track {
+    background-image: url(/Fichiers/img/4k-blurrygradient-1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+html::-webkit-scrollbar-thumb {
+    min-height: 40px;
+    background: #6B3343;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+body {
+    /* background: url(/Fichiers/img/4k-shapes2.png) no-repeat fixed; */
+    background-size: cover;
+    /* background-position-y: -824%; */
+}
+
+.wrapper {
+    width: 100%;
+    height: 400vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background: url(/Fichiers/img/4k-shapes1.png);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover; */
+    background: url(/Fichiers/svg/layered-waves-haikei\ \(2\).svg);
+    background-position-y: 6%;
+    z-index: 200;
+}
+
+header input {
+    display: none;
+}
+
+header label {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .6rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 250;
+}
+
+header label:hover {
+    font-size: 1.4rem;
+    opacity: .7;
+}
+
+.menu {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(/Fichiers/svg/bg-portrait-menu1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 200;
+    /* transform: translateY(-150%); */
+    position: absolute;
+    top: -100%;
+    transition: all .4s;
+}
+
+header input:checked~.menu {
+    /* transform: translate(0); */
+    top: 126px;
+}
+
+.logo {
+    padding-top: .5em;
+    width: 80%;
+    font-family: var(--rochesterfont);
+    text-align: center;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    z-index: 150;
+}
+
+.logo span {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* margin-right: 3em; */
+    white-space: nowrap;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 1em;
+    margin-top: 4rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+ul li a:hover {
+    opacity: .7;
+    filter: drop-shadow(0em 0em 2px rgb(0, 0, 0));
+    color: white;
+}
+
+#reservation {
+    margin-top: 5rem;
+    flex: 1;
+}
+
+#reservation a {
+    font-family: var(--rochesterfont);
+    color: white;
+    background-color: #6B3343;
+    padding: .2em 2em;
+    border-radius: 1em;
+    font-size: 1.7rem;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#reservation a:hover {
+    filter: drop-shadow(0em 0em 2px rgb(0, 0, 0));
+}
+
+#main {
+    width: 100%;
+    height: 81vh;
+    background: url(/Fichiers/img/4k-bubble2.png), url(/Fichiers/img/4k-bubble3.png), url(/Fichiers/img/4k-bubble1.png), url(/Fichiers/img/blob-scatter-haikei.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed, fixed, scroll, fixed;
+    background-position: right, left, center, left;
+    z-index: 8;
+}
+
+.reserver {
+    width: auto;
+    text-align: center;
+    position: relative;
+    top: 6%;
+    z-index: 20;
+}
+
+.reserver a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #B4DCCC;
+    padding: .2em 2em;
+    border-radius: 1em;
+    font-size: 1.7rem;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    font-family: var(--rochesterfont);
+}
+
+.slider {
+    width: 100%;
+    /* height: 31vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    top: 5%;
+    z-index: 10;
+}
+
+.slide {
+    width: 90%;
+    max-width: 600px;
+    /* background: url(/Fichiers/img/4k-blurrygradient-1.png);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.22));
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.slide p {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(10, 10, 10);
+}
+
+.img-div {
+    width: 300px;
+    height: 300px;
+    margin: 0 15px;
+    background: url(/Fichiers/img/4k-blurrygradient-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.div1 {
+    background: url(/Fichiers/engin-akyurt-4du1ZBIscOM-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.div2 {
+    background: url(/Fichiers/element5-digital-WCPg9ROZbM0-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.div3 {
+    background: url(/Fichiers/handsup.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.slick-prev {
+    display: none;
+}
+
+.slick-next {
+    display: none;
+}
+
+#prestations {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prestations-container {
+    width: 80%;
+    height: 90%;
+    background-color: rgb(161, 161, 161);
+}
+
+section {
+    width: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+    html::-webkit-scrollbar {
+        width: 10px;
+        height: 16px;
+        display: inherit;
+    }
+    header {
+        width: 100%;
+        height: 172px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        padding: .5em;
+        /* background: url(/Fichiers/img/4k-shapes1.png);
+        background-repeat: no-repeat;
+        background-position: fixed;
+        background-size: cover; */
+        background: url(/Fichiers/svg/layered-waves-haikei\ \(2\).svg);
+        background-position-y: 3%;
+        position: sticky;
+        top: 0;
+    }
+    header a {
+        text-decoration: none;
+    }
+    .logo {
+        width: 30%;
+        font-family: var(--rochesterfont);
+        font-size: 2.5rem;
+        /* margin-left: 1em; */
+        white-space: nowrap;
+        padding-top: 0;
+        margin-top: -1rem;
+    }
+    .logo a {
+        color: black;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        /* margin-right: 3em; */
+        white-space: nowrap;
+        margin-top: 0rem;
+    }
+    header ul li {
+        margin-top: 0rem;
+    }
+    #reservation {
+        /* position: relative;
+        top: 0;
+        right: 0; */
+        margin-top: 0rem;
+        flex: 0;
+        /* display: none; */
+    }
+    #reservation a {
+        padding: .2em 1.5em;
+        font-size: 1.7rem;
+    }
+    .menu {
+        position: static;
+        width: 70%;
+        min-height: 0vh;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 0;
+        /* margin-top: -2rem; */
+        transform: translateY(0);
+        transition: all .1s;
+        margin-top: 1rem;
+    }
+    header label {
+        display: none;
+    }
+    #main {
+        width: 100%;
+        height: 85vh;
+    }
+    .slide {
+        width: 50%;
+        max-width: 600px;
+        /* background: url(/Fichiers/img/4k-blurrygradient-1.png);
+        background-size: cover;
+        background-repeat: no-repeat; */
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.22));
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+}
