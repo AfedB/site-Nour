@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
 :root {
     --rochesterfont: 'Rochester', cursive;
 }
@@ -45,12 +46,13 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    /* position: fixed; */
     /* background: url(/Fichiers/img/4k-shapes1.png);
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover; */
-    background: url(/Fichiers/svg/layered-waves-haikei\ \(2\).svg);
-    background-position-y: 6%;
+    /* background: url(/Fichiers/svg/layered-waves-haikei\ \(2\).svg);
+    background-position-y: 6%; */
     z-index: 200;
 }
 
@@ -66,11 +68,13 @@ header label {
     padding: .6rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 250;
+    position: fixed;
 }
 
 header label:hover {
     font-size: 1.4rem;
     opacity: .7;
+    position: fixed;
 }
 
 .menu {
@@ -92,18 +96,24 @@ header label:hover {
 }
 
 header input:checked~.menu {
-    /* transform: translate(0); */
+    transform: translate(0);
     top: 126px;
+    position: fixed;
 }
 
 .logo {
     padding-top: .5em;
-    width: 80%;
+    width: 100%;
     font-family: var(--rochesterfont);
     text-align: center;
     font-size: 2.5rem;
     white-space: nowrap;
+    /* position: absolute; */
+    top: 0;
     z-index: 150;
+    background: url(/Fichiers/svg/layered-waves-haikei\ \(2\).svg);
+    background-position-y: 6%;
+    position: fixed;
 }
 
 .logo span {
@@ -172,6 +182,7 @@ ul li a:hover {
     background-attachment: fixed, fixed, scroll, fixed;
     background-position: right, left, center, left;
     z-index: 8;
+    transform: translateY(110px);
 }
 
 .reserver {
@@ -261,7 +272,7 @@ ul li a:hover {
     display: none;
 }
 
-#prestations {
+/* #prestations {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -272,11 +283,30 @@ ul li a:hover {
 .prestations-container {
     width: 80%;
     height: 90%;
-    background-color: rgb(161, 161, 161);
-}
+    background-color: rgb(255, 255, 255);
+} */
 
 section {
     width: 100%;
+}
+
+/* .table {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+} */
+
+.h4, h4 {
+    font-size: 1.5rem;
+}
+
+.text-center {
+    text-align: center !important;
 }
 
 @media only screen and (min-width: 960px) {
@@ -285,6 +315,7 @@ section {
         height: 16px;
         display: inherit;
     }
+
     header {
         width: 100%;
         height: 172px;
@@ -302,21 +333,27 @@ section {
         position: sticky;
         top: 0;
     }
+
     header a {
         text-decoration: none;
     }
+
     .logo {
         width: 30%;
+        top: 25px;
         font-family: var(--rochesterfont);
         font-size: 2.5rem;
         /* margin-left: 1em; */
         white-space: nowrap;
         padding-top: 0;
         margin-top: -1rem;
+        background: none;
     }
+
     .logo a {
         color: black;
     }
+
     header ul {
         display: flex;
         justify-content: space-evenly;
@@ -325,9 +362,11 @@ section {
         white-space: nowrap;
         margin-top: 0rem;
     }
+
     header ul li {
         margin-top: 0rem;
     }
+
     #reservation {
         /* position: relative;
         top: 0;
@@ -336,14 +375,16 @@ section {
         flex: 0;
         /* display: none; */
     }
+
     #reservation a {
         padding: .2em 1.5em;
         font-size: 1.7rem;
     }
+
     .menu {
         position: static;
-        width: 70%;
-        min-height: 0vh;
+        width: 90%;
+        min-height: 10vh;
         display: flex;
         flex-direction: row;
         background: none;
@@ -351,17 +392,22 @@ section {
         align-items: center;
         z-index: 0;
         /* margin-top: -2rem; */
-        transform: translateY(0);
+        transform: translateY(40px);
         transition: all .1s;
         margin-top: 1rem;
+        overflow-y: hidden;
     }
+
     header label {
         display: none;
     }
+
     #main {
         width: 100%;
         height: 85vh;
+        transform: translateY(0px);
     }
+
     .slide {
         width: 50%;
         max-width: 600px;
